@@ -5,9 +5,9 @@ import Signup from './Signup';
 const Sign = ({ setPage }) => {
   const [sign, setSign] = useState(0);
 
-  const handleSign = (sign) => {
-    if (sign === 'Signin') setSign(0);
-    if (sign === 'Signup') setSign(1);
+  const handleSign = (param) => {
+    if (param === 'Signin') setSign(0);
+    if (param === 'Signup') setSign(1);
   };
 
   return (
