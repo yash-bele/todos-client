@@ -1,6 +1,6 @@
 const AddIcon = () => {
   return (
-    <section className='mt-40 w-full flex justify-center'>
+    <section className='mt-[160px] w-full flex justify-center'>
       <svg
         stroke='currentColor'
         fill='currentColor'

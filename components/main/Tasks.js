@@ -193,7 +193,7 @@ const Tasks = ({
             })}
           </section>
         ) : (
-          <section className='-mt-20'>
+          <section className='-mt-[70px]'>
             <AddIcon />
           </section>
         )}

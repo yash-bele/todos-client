@@ -148,7 +148,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
           {!show ? (
             <section className='mt-10'>
               {todos.map((i) => {
-                const { id, title } = i;
+                const { id, title, tasks } = i;
                 return (
                   <div
                     key={id}
@@ -163,7 +163,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                       onClick={() => handleTodo(i)}
                       className='text-emerald-500 font-semibold tracking-wide cursor-pointer capitalize text-sm'
                     >
-                      {title}
+                      {`${title} (${tasks.length})`}
                     </h1>
                     <div className='flex items-center space-x-5'>
                       <FaRegEdit
