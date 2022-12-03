@@ -32,7 +32,6 @@ const Tasks = ({
 
   const handlePost = async (e) => {
     e.preventDefault();
-    getDatumOn();
     const trimTitle = title.trim();
     if (!trimTitle) return setAlert(true);
     const id = nanoid();
@@ -120,7 +119,13 @@ const Tasks = ({
             {todo.title}
           </h1>
         </div>
-        <div onClick={() => setMain(0)} className='absolute top-[5px] left-0'>
+        <div
+          onClick={() => {
+            getDatumOn();
+            setMain(0);
+          }}
+          className='absolute top-[5px] left-0'
+        >
           <FaRegArrowAltCircleLeft className='text-red-300 text-4xl hover:text-red-400 cursor-pointer' />
         </div>
         <form>
