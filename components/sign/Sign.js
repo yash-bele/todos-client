@@ -17,7 +17,7 @@ const Sign = ({ setPage }) => {
           Todos App
         </h1>
       </div>
-      <section className='mt-32 flex flex-col items-center'>
+      <section className='mt-28 flex flex-col items-center'>
         <div className='flex space-x-20'>
           {['Signin', 'Signup'].map((i) => (
             <button
