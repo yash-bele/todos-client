@@ -23,7 +23,7 @@ const Sign = ({ setPage }) => {
             <button
               key={i}
               onClick={() => handleSign(i)}
-              className={`w-20 h-10 tracking-wide text-emerald-600 font-semibold rounded-md pb-px bg-emerald-100 shadow border-double
+              className={`w-20 h-10 tracking-wide text-emerald-500 font-semibold rounded-md pb-px bg-emerald-100 shadow border-double
                 ${
                   i === 'Signin' &&
                   sign === 0 &&
