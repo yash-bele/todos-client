@@ -104,15 +104,15 @@ const Signup = ({ setSign }) => {
         ${alert === 2 && 'border-red-500 focus:border-red-500'}`}
         />
         {loading && alert === null ? (
-          <div className='w-52 mt-5 h-9 rounded-md bg-emerald-300 shadow relative flex justify-center'>
-            <ImSpinner9 className='tracking-wide text-emerald-700 text-2xl font-semibold absolute top-[17.5%] animate-spin' />
+          <div className='w-52 mt-5 h-9 rounded-md bg-emerald-200 shadow relative flex justify-center'>
+            <ImSpinner9 className='tracking-wide text-emerald-600 text-2xl font-semibold absolute top-[17.5%] animate-spin' />
           </div>
         ) : (
           <button
             type='submit'
             className='w-52 mt-5 h-9 rounded-md bg-emerald-100 hover:bg-emerald-300 shadow relative flex justify-center'
           >
-            <p className='tracking-wide text-emerald-700 font-semibold absolute top-[17%]'>
+            <p className='tracking-wide text-emerald-600 font-semibold absolute top-[17%]'>
               Signup
             </p>
           </button>
