@@ -25,8 +25,8 @@ const Signin = ({ setPage }) => {
       .then((data) => {
         if (data) {
           const { id, token } = data.data;
-          Cookies.set('cookie-id-bookie', id, { expires: 1 });
-          Cookies.set('cookie-token-bookie', token, { expires: 1 });
+          Cookies.set('coiokie-bodokie', id, { expires: 1 });
+          Cookies.set('cotookie-bokenokie', token, { expires: 1 });
           setPage('main');
         }
       })

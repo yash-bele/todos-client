@@ -12,20 +12,28 @@ const Sign = ({ setPage }) => {
 
   return (
     <main className='absolute w-full h-full flex justify-center'>
-      <div className='absolute top-3 left-7 border-b-4 border-emerald-100 pb-px pr-1'>
-        <h1 className='font-bold text-lg text-emerald-500 tracking-wide'>
+      <div className='absolute top-3 left-7 border-b-4 border-red-100 pb-px pr-1'>
+        <h1 className='font-bold text-lg text-emerald-300 tracking-wide'>
           Todos App
         </h1>
       </div>
-      <section className='mt-36 flex flex-col items-center'>
+      <section className='mt-32 flex flex-col items-center'>
         <div className='flex space-x-20'>
           {['Signin', 'Signup'].map((i) => (
             <button
               key={i}
               onClick={() => handleSign(i)}
-              className={`w-20 h-10 tracking-wide text-emerald-700 font-semibold rounded-md p-1 bg-emerald-100 shadow
-                ${i === 'Signin' && sign === 0 && 'bg-emerald-300'}
-                ${i === 'Signup' && sign === 1 && 'bg-emerald-300'}`}
+              className={`w-20 h-10 tracking-wide text-emerald-600 font-semibold rounded-md pb-px bg-emerald-100 shadow border-double
+                ${
+                  i === 'Signin' &&
+                  sign === 0 &&
+                  'border-4 border-emerald-300 shadow-md'
+                }
+                ${
+                  i === 'Signup' &&
+                  sign === 1 &&
+                  'border-4 border-emerald-300 shadow-md'
+                }`}
             >
               {i}
             </button>

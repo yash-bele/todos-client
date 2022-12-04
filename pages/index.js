@@ -6,7 +6,7 @@ import Loading from '../components/Loading';
 import Cookies from 'js-cookie';
 
 const Home = () => {
-  const TOKEN = Cookies.get('cookie-token-bookie');
+  const TOKEN = Cookies.get('cotookie-bokenokie');
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState('sign');
 

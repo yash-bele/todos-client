@@ -73,8 +73,8 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
   };
 
   const handleSignout = () => {
-    Cookies.remove('cookie-id-bookie');
-    Cookies.remove('cookie-token-bookie');
+    Cookies.remove('coiokie-bodokie');
+    Cookies.remove('cotookie-bokenokie');
     setPage('sign');
   };
 

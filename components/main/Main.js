@@ -7,7 +7,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const Main = ({ setPage }) => {
-  const ID = Cookies.get('cookie-id-bookie');
+  const ID = Cookies.get('coiokie-bodokie');
   const [main, setMain] = useState(0);
   const [loading, setLoading] = useState(true);
   const [badAuth, setBadAuth] = useState(false);
