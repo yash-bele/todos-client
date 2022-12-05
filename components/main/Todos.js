@@ -20,7 +20,11 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
 
   const handlePost = async (e) => {
     e.preventDefault();
-    const trimTitle = title.trim();
+    let trimTitle = title
+      .split(' ')
+      .filter((i) => i !== '')
+      .map((i) => i[0].toUpperCase() + i.substring(1).toLowerCase())
+      .join(' ');
     if (!trimTitle) return setAlert(true);
     const id = nanoid();
     const postTodo = [{ id, title: trimTitle, tasks: [] }, ...todos];
@@ -52,7 +56,11 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
 
   const handlePatchPost = async (e) => {
     e.preventDefault();
-    const trimTitle = title.trim();
+    let trimTitle = title
+      .split(' ')
+      .filter((i) => i !== '')
+      .map((i) => i[0].toUpperCase() + i.substring(1).toLowerCase())
+      .join(' ');
     if (!trimTitle) return setAlert(true);
     const patchTodo = todos.map((i) => {
       if (i.id === editID) {
@@ -123,6 +131,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                 type='text'
                 spellCheck='false'
                 placeholder='Enter Todo'
+                maxLength={20}
                 className={`z-10 w-72 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-500 font-semibold text-sm placeholder:text-emerald-300 placeholder:italic
             ${alert && 'border-red-500 focus:border-red-500'}`}
               />
@@ -161,9 +170,9 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                   >
                     <h1
                       onClick={() => handleTodo(i)}
-                      className={`font-semibold tracking-wide cursor-pointer capitalize text-sm ${
+                      className={`font-semibold tracking-wide cursor-pointer text-sm ${
                         edit && id === editID
-                          ? 'text-red-500'
+                          ? 'text-red-400'
                           : 'text-emerald-500'
                       }`}
                     >

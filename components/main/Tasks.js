@@ -32,10 +32,13 @@ const Tasks = ({
 
   const handlePost = async (e) => {
     e.preventDefault();
-    let trimTitle = title.trim();
+    let trimTitle = title
+      .split(' ')
+      .filter((i) => i !== '')
+      .join(' ');
+    if (!trimTitle) return setAlert(true);
     trimTitle =
       trimTitle[0].toUpperCase() + trimTitle.substring(1).toLowerCase();
-    if (!trimTitle) return setAlert(true);
     const id = nanoid();
     const postTask = [{ id, title: trimTitle }, ...tasks];
     setTitle('');
@@ -80,8 +83,13 @@ const Tasks = ({
 
   const handlePatchPost = async (e) => {
     e.preventDefault();
-    const trimTitle = title.trim();
+    let trimTitle = title
+      .split(' ')
+      .filter((i) => i !== '')
+      .join(' ');
     if (!trimTitle) return setAlert(true);
+    trimTitle =
+      trimTitle[0].toUpperCase() + trimTitle.substring(1).toLowerCase();
     const patchTask = tasks.map((i) => {
       if (i.id === editID) {
         return { ...i, title: trimTitle };
@@ -116,8 +124,8 @@ const Tasks = ({
   return (
     <main className='absolute w-full h-full flex justify-center'>
       <main className='mt-[19px] relative'>
-        <div className='border-b-4 border-emerald-100 pb-[0.5px] pr-1 w-fit mx-auto'>
-          <h1 className='font-semibold text-2xl text-emerald-400 tracking-wide capitalize'>
+        <div className='border-b-4 border-emerald-100 pb-[0.5px] pr-1 w-fit mx-auto mt-1'>
+          <h1 className='font-semibold text-lg text-emerald-400 tracking-wide'>
             {todo.title}
           </h1>
         </div>
