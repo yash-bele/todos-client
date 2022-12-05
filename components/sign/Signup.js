@@ -79,9 +79,9 @@ const Signup = ({ setSign }) => {
           value={data.name}
           onChange={handleChange('name')}
           type='text'
-          placeholder='User Name'
+          placeholder='First Name'
           spellCheck='false'
-          maxLength={8}
+          maxLength={10}
           className={`w-80 mb-3 py-2 px-3 text-sm outline-none border rounded-md tracking-wide text-emerald-500 font-semibold border-emerald-300 focus:border-emerald-500 placeholder:text-emerald-300 placeholder:italic
         ${alert === 0 && 'border-red-500 focus:border-red-500'}`}
         />
