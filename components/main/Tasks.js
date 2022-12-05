@@ -139,7 +139,7 @@ const Tasks = ({
           <FaRegArrowAltCircleLeft className='text-red-300 text-4xl hover:text-red-400 cursor-pointer' />
         </div>
         <form>
-          <div className='flex items-center mt-16'>
+          <div className='flex items-center mt-[64.5px]'>
             <input
               ref={ref}
               value={title}
