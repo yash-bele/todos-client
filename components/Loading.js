@@ -9,7 +9,7 @@ const Loading = () => {
         <link rel='icon' href='' />
       </Head>
       <main className='absolute w-full h-full flex justify-center'>
-        <section className='mt-36'>
+        <section className='mt-40'>
           <svg
             stroke='currentColor'
             fill='none'
