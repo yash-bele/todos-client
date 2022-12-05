@@ -95,7 +95,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
           </div>
           <div
             onClick={handleSignout}
-            className='border-2 border-red-300 hover:border-red-400 rounded-3xl py-1.5 px-5 bg-red-50 cursor-pointer text-red-500 hover:text-red-600 text-xl'
+            className='border-2 border-red-200 hover:border-red-300 rounded-3xl py-1.5 px-5 bg-red-50 cursor-pointer text-red-400 hover:text-red-500 text-xl'
           >
             <svg
               stroke='currentColor'
