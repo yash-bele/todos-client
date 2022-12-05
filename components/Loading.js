@@ -10,7 +10,7 @@ const Loading = () => {
         <link rel='icon' href='' />
       </Head>
       <main className='absolute w-full h-full flex justify-center'>
-        <section className='mt-44'>
+        <section className='mt-48'>
           <FiRefreshCw className='text-9xl text-emerald-100 animate-spin' />
         </section>
       </main>
