@@ -60,7 +60,7 @@ const Signin = ({ setPage }) => {
           type='text'
           placeholder='Email Address'
           spellCheck='false'
-          className={`w-80 mb-3 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-500 font-semibold placeholder:text-emerald-300 placeholder:italic
+          className={`w-80 mb-3 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-400 font-semibold placeholder:text-emerald-200 placeholder:italic
         ${alert === 0 && 'border-red-500 focus:border-red-500'}`}
         />
         <input
@@ -69,7 +69,7 @@ const Signin = ({ setPage }) => {
           type='text'
           placeholder='Password'
           spellCheck='false'
-          className={`w-80 mb-3 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-500 font-semibold placeholder:text-emerald-300 placeholder:italic
+          className={`w-80 mb-3 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-400 font-semibold placeholder:text-emerald-200 placeholder:italic
         ${alert === 1 && 'border-red-500 focus:border-red-500'}`}
         />
         {loading && alert === null ? (
