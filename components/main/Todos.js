@@ -155,13 +155,17 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                     className={`flex items-center justify-between w-[325px] rounded-md px-4 py-2 border mb-2
               ${
                 edit && id === editID
-                  ? 'border-emerald-500 bg-emerald-100'
+                  ? 'border-red-300 bg-red-50'
                   : 'border-emerald-300 bg-emerald-50'
               }`}
                   >
                     <h1
                       onClick={() => handleTodo(i)}
-                      className='text-emerald-500 font-semibold tracking-wide cursor-pointer capitalize text-sm'
+                      className={`font-semibold tracking-wide cursor-pointer capitalize text-sm ${
+                        edit && id === editID
+                          ? 'text-red-500'
+                          : 'text-emerald-500'
+                      }`}
                     >
                       {`${title} (${tasks.length})`}
                     </h1>
@@ -174,7 +178,9 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                       />
                       <FaRegTrashAlt
                         onClick={() => handleDelete(id)}
-                        className='text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg z-10'
+                        className={`text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg z-10 ${
+                          edit && id === editID ? 'hidden' : 'block'
+                        }`}
                       />
                     </div>
                   </div>

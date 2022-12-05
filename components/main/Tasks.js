@@ -32,7 +32,9 @@ const Tasks = ({
 
   const handlePost = async (e) => {
     e.preventDefault();
-    const trimTitle = title.trim();
+    let trimTitle = title.trim();
+    trimTitle =
+      trimTitle[0].toUpperCase() + trimTitle.substring(1).toLowerCase();
     if (!trimTitle) return setAlert(true);
     const id = nanoid();
     const postTask = [{ id, title: trimTitle }, ...tasks];
@@ -169,11 +171,17 @@ const Tasks = ({
                   className={`flex items-center justify-between w-[325px] rounded-md px-4 py-2 border mb-2
               ${
                 edit && id === editID
-                  ? 'border-emerald-500 bg-emerald-100'
+                  ? 'border-red-300 bg-red-50'
                   : 'border-emerald-300 bg-emerald-50'
               }`}
                 >
-                  <h1 className='text-emerald-500 font-semibold tracking-wide capitalize text-sm'>
+                  <h1
+                    className={`font-semibold tracking-wide cursor-pointer text-sm ${
+                      edit && id === editID
+                        ? 'text-red-400'
+                        : 'text-emerald-500'
+                    }`}
+                  >
                     {title}
                   </h1>
                   <div className='flex items-center space-x-5'>
@@ -185,7 +193,9 @@ const Tasks = ({
                     />
                     <FaRegTrashAlt
                       onClick={() => handleDelete(id)}
-                      className='text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg'
+                      className={`text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg ${
+                        edit && id === editID ? 'hidden' : 'block'
+                      }`}
                     />
                   </div>
                 </div>
