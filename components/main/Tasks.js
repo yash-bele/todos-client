@@ -88,8 +88,8 @@ const Tasks = ({
       .filter((i) => i !== '')
       .join(' ');
     if (!trimTitle) return setAlert(true);
-    trimTitle =
-      trimTitle[0].toUpperCase() + trimTitle.substring(1).toLowerCase();
+
+
     const patchTask = tasks.map((i) => {
       if (i.id === editID) {
         return { ...i, title: trimTitle };
