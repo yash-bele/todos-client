@@ -147,7 +147,7 @@ const Tasks = ({
               type='text'
               spellCheck='false'
               placeholder='Enter Task'
-              className={`w-72 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-500 font-semibold placeholder:text-emerald-300 placeholder:italic
+              className={`w-72 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-400 font-semibold placeholder:text-emerald-300 placeholder:italic
             ${alert && 'border-red-500 focus:border-red-500'}`}
             />
             {edit ? (
@@ -186,8 +186,8 @@ const Tasks = ({
                   <h1
                     className={`font-semibold tracking-wide cursor-pointer text-sm ${
                       edit && id === editID
-                        ? 'text-red-400'
-                        : 'text-emerald-500'
+                        ? 'text-red-300'
+                        : 'text-emerald-400'
                     }`}
                   >
                     {title}
