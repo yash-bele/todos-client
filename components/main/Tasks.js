@@ -134,7 +134,7 @@ const Tasks = ({
             getDatumOn();
             setMain(0);
           }}
-          className='absolute top-[5px] left-0'
+          className='absolute top-1 left-0'
         >
           <FaRegArrowAltCircleLeft className='text-red-300 text-4xl hover:text-red-400 cursor-pointer' />
         </div>
