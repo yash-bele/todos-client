@@ -12,7 +12,7 @@ const Sign = ({ setPage }) => {
 
   return (
     <main className='absolute w-full h-full flex justify-center'>
-      <div className='absolute top-3 left-7 border-b-4 border-red-100 pb-px pr-1'>
+      <div className='absolute top-3 left-7 border-b-4 border-red-100 pb-[0.5px] pr-1'>
         <h1 className='font-bold text-lg text-red-300 tracking-wide'>
           Todos App
         </h1>
