@@ -132,7 +132,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                 spellCheck='false'
                 placeholder='Enter Todo'
                 maxLength={20}
-                className={`z-10 w-72 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-400 font-semibold text-sm placeholder:text-emerald-300 placeholder:italic
+                className={`z-10 w-72 py-2 px-3 text-sm outline-none border border-emerald-300 focus:border-emerald-500 rounded-md tracking-wide text-emerald-400 font-semibold text-sm placeholder:text-emerald-200 placeholder:italic
             ${alert && 'border-red-500 focus:border-red-500'}`}
               />
               {edit ? (
