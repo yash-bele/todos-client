@@ -97,7 +97,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
       <main className='relative'>
         <section className='absolute top-6 flex justify-between w-full'>
           <div className='top-5 left-0 border-2 border-emerald-300 rounded-3xl py-1 px-5 bg-emerald-50'>
-            <h1 className='font-normal text-emerald-500 tracking-wide'>
+            <h1 className='font-normal text-emerald-400 tracking-wide'>
               <span className='font-bold capitalize'>{data.name}’</span>s Todos
             </h1>
           </div>
