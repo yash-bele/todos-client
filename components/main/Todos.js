@@ -141,7 +141,7 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                   type='submit'
                   className='group rounded-full p-5 border border-emerald-300 hover:border-emerald-500 bg-emerald-50 cursor-pointer relative'
                 >
-                  <FaRegEdit className='text-lg text-emerald-400 group-hover:text-emerald-600 absolute bottom-3 right-2.5' />
+                  <FaRegEdit className='text-lg text-emerald-400 group-hover:text-emerald-500 absolute bottom-3 right-2.5' />
                 </button>
               ) : (
                 <button
@@ -181,13 +181,13 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                     <div className='flex items-center space-x-5'>
                       <FaRegEdit
                         onClick={() => handlePatch(id, title)}
-                        className={`text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg z-10 ${
+                        className={`text-emerald-400 hover:text-emerald-500 cursor-pointer text-lg z-10 ${
                           edit && id === editID ? 'hidden' : 'block'
                         }`}
                       />
                       <FaRegTrashAlt
                         onClick={() => handleDelete(id)}
-                        className={`text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg z-10 ${
+                        className={`text-emerald-400 hover:text-emerald-500 cursor-pointer text-lg z-10 ${
                           edit && id === editID ? 'hidden' : 'block'
                         }`}
                       />
