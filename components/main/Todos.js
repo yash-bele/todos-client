@@ -172,8 +172,8 @@ const Todos = ({ ID, setPage, data, setData, todos, setTodos, handleTodo }) => {
                       onClick={() => handleTodo(i)}
                       className={`font-semibold tracking-wide cursor-pointer text-sm ${
                         edit && id === editID
-                          ? 'text-red-400'
-                          : 'text-emerald-500'
+                          ? 'text-red-300'
+                          : 'text-emerald-400'
                       }`}
                     >
                       {`${title} (${tasks.length})`}
