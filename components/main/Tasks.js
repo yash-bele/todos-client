@@ -114,7 +114,7 @@ const Tasks = ({
   return (
     <main className='absolute w-full h-full flex justify-center'>
       <main className='mt-[19px] relative'>
-        <div className='border-b-4 border-emerald-100 pb-px pr-1 w-fit mx-auto'>
+        <div className='border-b-4 border-emerald-100 pb-[0.5px] pr-1 w-fit mx-auto'>
           <h1 className='font-semibold text-2xl text-emerald-500 tracking-wide capitalize'>
             {todo.title}
           </h1>
