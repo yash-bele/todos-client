@@ -37,8 +37,8 @@ const Tasks = ({
       .filter((i) => i !== '')
       .join(' ');
     if (!trimTitle) return setAlert(true);
-    trimTitle =
-      trimTitle[0].toUpperCase() + trimTitle.substring(1).toLowerCase();
+
+
     const id = nanoid();
     const postTask = [{ id, title: trimTitle }, ...tasks];
     setTitle('');
