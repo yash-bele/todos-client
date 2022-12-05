@@ -136,7 +136,7 @@ const Tasks = ({
           }}
           className='absolute top-1 left-0'
         >
-          <FaRegArrowAltCircleLeft className='text-red-300 text-4xl hover:text-red-400 cursor-pointer' />
+          <FaRegArrowAltCircleLeft className='text-red-200 text-4xl hover:text-red-300 cursor-pointer' />
         </div>
         <form>
           <div className='flex items-center mt-[64.5px]'>
@@ -156,7 +156,7 @@ const Tasks = ({
                 type='submit'
                 className='group rounded-full p-5 border border-emerald-300 hover:border-emerald-500 bg-emerald-50 cursor-pointer relative'
               >
-                <FaRegEdit className='text-lg text-emerald-400 group-hover:text-emerald-600 absolute bottom-3 right-2.5' />
+                <FaRegEdit className='text-lg text-emerald-400 group-hover:text-emerald-500 absolute bottom-3 right-2.5' />
               </button>
             ) : (
               <button
@@ -164,7 +164,7 @@ const Tasks = ({
                 type='submit'
                 className='group rounded-full p-5 border border-emerald-300 hover:border-emerald-500 bg-emerald-50 cursor-pointer relative'
               >
-                <RiAddFill className='text-2xl text-emerald-300 group-hover:text-emerald-500 absolute bottom-2 right-2' />
+                <RiAddFill className='text-2xl text-emerald-300 group-hover:text-emerald-400 absolute bottom-2 right-2' />
               </button>
             )}
           </div>
@@ -184,7 +184,7 @@ const Tasks = ({
               }`}
                 >
                   <h1
-                    className={`font-semibold tracking-wide cursor-pointer text-sm ${
+                    className={`font-semibold tracking-wide text-sm ${
                       edit && id === editID
                         ? 'text-red-300'
                         : 'text-emerald-400'
@@ -195,13 +195,13 @@ const Tasks = ({
                   <div className='flex items-center space-x-5'>
                     <FaRegEdit
                       onClick={() => handlePatch(id, title)}
-                      className={`text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg ${
+                      className={`text-emerald-400 hover:text-emerald-500 cursor-pointer text-lg ${
                         edit && id === editID ? 'hidden' : 'block'
                       }`}
                     />
                     <FaRegTrashAlt
                       onClick={() => handleDelete(id)}
-                      className={`text-emerald-400 hover:text-emerald-600 cursor-pointer text-lg ${
+                      className={`text-emerald-400 hover:text-emerald-500 cursor-pointer text-lg ${
                         edit && id === editID ? 'hidden' : 'block'
                       }`}
                     />
