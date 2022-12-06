@@ -37,8 +37,6 @@ const Tasks = ({
       .filter((i) => i !== '')
       .join(' ');
     if (!trimTitle) return setAlert(true);
-
-
     const id = nanoid();
     const postTask = [{ id, title: trimTitle }, ...tasks];
     setTitle('');
@@ -88,8 +86,6 @@ const Tasks = ({
       .filter((i) => i !== '')
       .join(' ');
     if (!trimTitle) return setAlert(true);
-
-
     const patchTask = tasks.map((i) => {
       if (i.id === editID) {
         return { ...i, title: trimTitle };
